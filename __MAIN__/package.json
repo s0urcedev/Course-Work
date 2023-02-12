@@ -1,0 +1,42 @@
+{
+  "name": "course-work-main",
+  "description": "course-work-main",
+  "version": "1.15.0",
+  "scripts": {
+    "dev": "sapper dev",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build"
+  },
+  "dependencies": {
+    "@azure/identity": "^1.1.0",
+    "@microsoft/microsoft-graph-client": "^3.0.4",
+    "body-parser": "^1.20.1",
+    "compression": "^1.7.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "isomorphic-fetch": "^3.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^4.11.0",
+    "sirv": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "@rollup/plugin-babel": "^5.0.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "@rollup/plugin-replace": "^2.4.0",
+    "@rollup/plugin-url": "^5.0.0",
+    "eslint": "^8.31.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "sapper": "^0.28.0",
+    "svelte": "^3.17.3"
+  }
+}
