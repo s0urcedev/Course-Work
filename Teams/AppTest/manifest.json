@@ -1,0 +1,99 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.11",
+    "version": "1.0.4",
+    "id": "2b669804-3a58-4332-a20e-7e78db76790d",
+    "packageName": "com.contoso.testapp",
+    "developer": {
+      "name": "Boyarkindev",
+      "websiteUrl": "https://github.com/s0urcedev",
+      "privacyUrl": "https://github.com/s0urcedev",
+      "termsOfUseUrl": "https://github.com/s0urcedev"
+    },
+    "icons": {
+      "color": "color.png",
+      "outline": "outline.png"
+    },
+    "name": {
+      "short": "Test",
+      "full": "Test App"
+    },
+    "description": {
+      "short": "Test App for Microsoft Teams",
+      "full": "This sample app provides a very simple app. You can extend this to add more content and capabilities."
+    },
+    "accentColor": "#60A18E",
+    "staticTabs": [
+      {
+        "entityId": "Google",
+        "name": "Google",
+        "contentUrl": "https://www.google.com",
+        "websiteUrl": "https://www.google.com",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "Eolymp",
+        "name": "Eolymp",
+        "contentUrl": "https://www.eolymp.com",
+        "websiteUrl": "https://www.eolymp.com",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "GFG",
+        "name": "GFG",
+        "contentUrl": "https://www.geeksforgeeks.org",
+        "websiteUrl": "https://www.geeksforgeeks.org",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "Codeforces",
+        "name": "Codeforces",
+        "contentUrl": "https://www.codeforces.com",
+        "websiteUrl": "https://www.codeforces.com",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "CodeWars",
+        "name": "CodeWars",
+        "contentUrl": "https://www.codewars.com",
+        "websiteUrl": "https://www.codewars.com",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "HelloWorld",
+        "name": "HelloWorld",
+        "contentUrl": "https://782b-2001-8a0-6c77-2800-891d-df1-f9aa-cd24.eu.ngrok.io",
+        "websiteUrl": "https://782b-2001-8a0-6c77-2800-891d-df1-f9aa-cd24.eu.ngrok.io",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "about",
+        "scopes": [
+          "personal"
+        ]
+      }
+    ],
+    "permissions": [
+      "identity",
+      "messageTeamMembers"
+    ],
+    "validDomains": [
+      "www.google.com",
+      "www.eolymp.com",
+      "www.geeksforgeeks.org",
+      "www.codeforces.com",
+      "www.codewars.com"
+    ]
+  }

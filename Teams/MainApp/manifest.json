@@ -1,0 +1,44 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.11",
+    "version": "1.0.0",
+    "id": "c6dab06f-149a-4090-8d49-0a16e6dc985d",
+    "packageName": "com.s0urcedev.mainapp",
+    "developer": {
+      "name": "Boyarkindev",
+      "websiteUrl": "https://github.com/s0urcedev",
+      "privacyUrl": "https://github.com/s0urcedev",
+      "termsOfUseUrl": "https://github.com/s0urcedev"
+    },
+    "icons": {
+      "color": "color.png",
+      "outline": "outline.png"
+    },
+    "name": {
+      "short": "Main",
+      "full": "Main App"
+    },
+    "description": {
+      "short": "Main App for Course Work for Microsoft Teams",
+      "full": "Main App for Course Work for Microsoft Teams"
+    },
+    "accentColor": "#009075",
+    "staticTabs": [
+      {
+        "entityId": "AT",
+        "name": "AT",
+        "contentUrl": "https://course-work.onrender.com",
+        "websiteUrl": "https://course-work.onrender.com",
+        "scopes": [
+          "personal"
+        ]
+      }
+    ],
+    "permissions": [
+      "identity",
+      "messageTeamMembers"
+    ],
+    "validDomains": [
+      "https://course-work.onrender.com"
+    ]
+  }

@@ -1,0 +1,44 @@
+****************************************************************************************************
+WORK STARTED: { Fri Aug 19 2022 16:35:52 GMT+0100 (British Summer Time) }
+1. { Fri Aug 19 2022 16:35:52 GMT+0100 (British Summer Time) } < API initialized >
+2. { Fri Aug 19 2022 16:36:03 GMT+0100 (British Summer Time) } < API authorized >
+3. { Fri Aug 19 2022 16:36:04 GMT+0100 (British Summer Time) } < Listening on port http://localhost:3333 >
+4. { Fri Aug 19 2022 16:36:16 GMT+0100 (British Summer Time) } [ 200 ] < /api/user >
+5. { Fri Aug 19 2022 16:36:17 GMT+0100 (British Summer Time) } [ 200 ] < /api/inbox >
+6. { Fri Aug 19 2022 16:36:19 GMT+0100 (British Summer Time) } [ 200 ] < /api/users >
+7. { Fri Aug 19 2022 16:36:21 GMT+0100 (British Summer Time) } [ 200 ] < /api/joinedTeams >
+****************************************************************************************************
+WORK STARTED: { Fri Aug 19 2022 21:49:50 GMT+0100 (British Summer Time) }
+1. { Fri Aug 19 2022 21:49:50 GMT+0100 (British Summer Time) } < API initialized >
+2. { Fri Aug 19 2022 21:50:01 GMT+0100 (British Summer Time) } < API authorized >
+3. { Fri Aug 19 2022 21:50:01 GMT+0100 (British Summer Time) } < Listening on port http://localhost:3333 >
+4. { Fri Aug 19 2022 21:50:08 GMT+0100 (British Summer Time) } [ 200 ] < /api/user >
+5. { Fri Aug 19 2022 21:50:09 GMT+0100 (British Summer Time) } [ 200 ] < /api/inbox >
+6. { Fri Aug 19 2022 21:50:12 GMT+0100 (British Summer Time) } [ 200 ] < /api/users >
+7. { Fri Aug 19 2022 21:50:14 GMT+0100 (British Summer Time) } [ 200 ] < /api/joinedTeams >
+****************************************************************************************************
+WORK STARTED: { Tue Aug 23 2022 17:08:43 GMT+0100 (British Summer Time) }
+1. { Tue Aug 23 2022 17:08:43 GMT+0100 (British Summer Time) } < API initialized >
+2. { Tue Aug 23 2022 17:09:23 GMT+0100 (British Summer Time) } < API authorized >
+3. { Tue Aug 23 2022 17:09:23 GMT+0100 (British Summer Time) } < Listening on port http://localhost:3333 >
+4. { Tue Aug 23 2022 17:12:06 GMT+0100 (British Summer Time) } [ 200 ] < /api/user >
+5. { Tue Aug 23 2022 17:12:08 GMT+0100 (British Summer Time) } [ 200 ] < /api/inbox >
+6. { Tue Aug 23 2022 17:12:10 GMT+0100 (British Summer Time) } [ 200 ] < /api/users >
+7. { Tue Aug 23 2022 17:12:13 GMT+0100 (British Summer Time) } [ 200 ] < /api/joinedTeams >
+8. { Tue Aug 23 2022 17:16:18 GMT+0100 (British Summer Time) } [ 200 ] < /api/user >
+9. { Tue Aug 23 2022 17:16:20 GMT+0100 (British Summer Time) } [ 200 ] < /api/inbox >
+10. { Tue Aug 23 2022 17:16:22 GMT+0100 (British Summer Time) } [ 200 ] < /api/users >
+11. { Tue Aug 23 2022 17:16:24 GMT+0100 (British Summer Time) } [ 200 ] < /api/joinedTeams >
+12. { Tue Aug 23 2022 17:23:23 GMT+0100 (British Summer Time) } [ 200 ] < /api/user >
+13. { Tue Aug 23 2022 17:23:24 GMT+0100 (British Summer Time) } [ 200 ] < /api/inbox >
+14. { Tue Aug 23 2022 17:23:25 GMT+0100 (British Summer Time) } [ 200 ] < /api/users >
+15. { Tue Aug 23 2022 17:23:27 GMT+0100 (British Summer Time) } [ 200 ] < /api/joinedTeams >
+****************************************************************************************************
+WORK STARTED: { Wed Oct 05 2022 15:56:15 GMT+0100 (British Summer Time) }
+1. { Wed Oct 05 2022 15:56:15 GMT+0100 (British Summer Time) } < API initialized >
+2. { Wed Oct 05 2022 16:01:26 GMT+0100 (British Summer Time) } < API authorized >
+3. { Wed Oct 05 2022 16:01:26 GMT+0100 (British Summer Time) } < Listening on port http://localhost:3333 >
+4. { Wed Oct 05 2022 16:01:33 GMT+0100 (British Summer Time) } [ 200 ] < /api/user >
+5. { Wed Oct 05 2022 16:01:34 GMT+0100 (British Summer Time) } [ 200 ] < /api/inbox >
+6. { Wed Oct 05 2022 16:01:35 GMT+0100 (British Summer Time) } [ 200 ] < /api/users >
+7. { Wed Oct 05 2022 16:01:38 GMT+0100 (British Summer Time) } [ 200 ] < /api/joinedTeams >

@@ -1,0 +1,50 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.11",
+    "version": "1.0.5",
+    "id": "2b669804-3a58-4332-a20e-7e78db76790d",
+    "packageName": "com.contoso.testapp",
+    "developer": {
+      "name": "Boyarkindev",
+      "websiteUrl": "https://github.com/s0urcedev",
+      "privacyUrl": "https://github.com/s0urcedev",
+      "termsOfUseUrl": "https://github.com/s0urcedev"
+    },
+    "icons": {
+      "color": "color.png",
+      "outline": "outline.png"
+    },
+    "name": {
+      "short": "Test",
+      "full": "Test App"
+    },
+    "description": {
+      "short": "Test App for Microsoft Teams",
+      "full": "This sample app provides a very simple app. You can extend this to add more content and capabilities."
+    },
+    "accentColor": "#60A18E",
+    "staticTabs": [
+      {
+        "entityId": "Main",
+        "name": "Main",
+        "contentUrl": "https://expressmsgraph.loca.lt",
+        "websiteUrl": "https://expressmsgraph.loca.lt",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "about",
+        "scopes": [
+          "personal"
+        ]
+      }
+    ],
+    "permissions": [
+      "identity",
+      "messageTeamMembers"
+    ],
+    "validDomains": [
+      "https://expressmsgraph.loca.lt"
+    ]
+  }

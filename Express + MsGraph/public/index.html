@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Express + MsGraph</title>
+        <style>
+            html {
+                font-family: sans-serif;
+            }
+            
+            table, td {
+                border:1px solid black;
+            }
+
+            td {
+                padding: 10px;
+            }
+
+            td.button {
+                text-align: center;
+            }
+
+            button {
+                padding: 10px;
+                font-size: 25px;
+            }
+
+            span {
+                white-space: pre-line;
+            }
+        </style>
+    </head>
+    <body>
+        <p style="font-size: 30px;">Express + MsGraph</p>
+        <table>
+            <tr>
+                <td class="button"><button type="button" onclick="user()">User</button></td>
+                <td><span id="userSpan"></span></td>
+            </tr>
+            <tr>
+                <td class="button"><button type="button" onclick="inbox()">Inbox</button></td>
+                <td><span id="inboxSpan"></span></td>
+            </tr>
+            <tr>
+                <td class="button"><button type="button" onclick="users()">Users</button></td>
+                <td><span id="usersSpan"></span></td>
+            </tr>
+            <tr>
+                <td class="button"><button type="button" onclick="joinedTeams()">Joined teams</button></td>
+                <td><span id="joinedTeamsSpan"></span></td>
+            </tr>
+        </table>
+        <script src="/script.js"></script>
+    </body>
+</html>

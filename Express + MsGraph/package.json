@@ -1,0 +1,15 @@
+{
+  "name": "express-and-msgraph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "_s0urce_",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/identity": "^2.1.0",
+    "@microsoft/microsoft-graph-client": "^3.0.2",
+    "express": "^4.18.1",
+    "isomorphic-fetch": "^3.0.0",
+    "localtunnel": "^2.0.2"
+  }
+}
