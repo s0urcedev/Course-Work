@@ -66,6 +66,7 @@
         text-align: center;
         margin: 0;
         padding: 10px;
+        white-space: pre-wrap;
     }
 
     pre.answer {
@@ -74,6 +75,7 @@
         margin: 0;
         font-weight: 400;
         font-size: 28px;
+        white-space: pre-wrap;
     }
 
     button {
