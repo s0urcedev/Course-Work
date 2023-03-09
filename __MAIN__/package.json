@@ -1,7 +1,7 @@
 {
   "name": "course-work-main",
   "description": "course-work-main",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
@@ -16,6 +16,7 @@
     "cookie-parser": "^1.4.6",
     "express": "^4.18.1",
     "isomorphic-fetch": "^3.0.0",
+    "json-as-xlsx": "^2.5.3",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^4.11.0",
     "sirv": "^1.0.0"

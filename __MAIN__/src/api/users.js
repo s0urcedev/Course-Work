@@ -1,12 +1,9 @@
 import { MongoClient } from 'mongodb';
 import { settings } from '../settings';
 
-const client = new MongoClient(settings.authDBURL);
-
-const dbUsers = client.db('users');
-const collectionUsers = dbUsers.collection('users');
-
 export async function getUser(email, password) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionUsers = client.db('users').collection('users');
     await client.connect();
     let res;
     try {

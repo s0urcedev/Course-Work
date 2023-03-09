@@ -2,14 +2,9 @@ import { MongoClient, ObjectId } from 'mongodb';
 import { settings } from '../settings.js';
 import { calculateLevels, calculateLevelsIndexes } from '../tools/calculations.js';
 
-const client = new MongoClient(settings.authDBURL);
-
-const dbTesting = client.db('testing');
-const collectionTests = dbTesting.collection('tests');
-const collectionSession = dbTesting.collection('sessions');
-const collectionResults = dbTesting.collection('results');
-
 export async function getTest(id) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionTests = client.db('testing').collection('tests');
     await client.connect();
     let res;
     try {
@@ -22,6 +17,8 @@ export async function getTest(id) {
 }
 
 export async function getSession(id) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionSession = client.db('testing').collection('sessions');
     await client.connect();
     let res;
     try {
@@ -34,6 +31,8 @@ export async function getSession(id) {
 }
 
 export async function getQuestion(sessionId) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionTests = client.db('testing').collection('tests');
     let session = await getSession(sessionId);
     await client.connect();
     let res;
@@ -52,6 +51,8 @@ export async function getQuestion(sessionId) {
 }
 
 export async function getUsersTests(authorsEmail) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionTests = client.db('testing').collection('tests');
     await client.connect();
     let res;
     try {  
@@ -64,6 +65,8 @@ export async function getUsersTests(authorsEmail) {
 }
 
 export async function getResult(id) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionResults = client.db('testing').collection('results');
     await client.connect();
     let res;
     try {
@@ -76,6 +79,8 @@ export async function getResult(id) {
 }
 
 export async function getTestsResults(id) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionResults = client.db('testing').collection('results');
     await client.connect();
     let res;
     try {  
@@ -88,6 +93,8 @@ export async function getTestsResults(id) {
 }
 
 export async function createTest(email) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionTests = client.db('testing').collection('tests');
     await client.connect();
     let inseted = await collectionTests.insertOne({
         'authorsEmail': email,
@@ -111,12 +118,16 @@ export async function createTest(email) {
 }
 
 export async function deleteTest(id) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionTests = client.db('testing').collection('tests');
     await client.connect();
     await collectionTests.deleteOne({ _id: ObjectId(id) });
     await client.close();
 }
 
 export async function editTest(id, object) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionTests = client.db('testing').collection('tests');
     await client.connect();
     let status = 500;
     try {
@@ -131,6 +142,8 @@ export async function editTest(id, object) {
 
 export async function startSession(id, userName) {
     let test = await getTest(id);
+    const client = new MongoClient(settings.authDBURL);
+    const collectionSession = client.db('testing').collection('sessions');
     await client.connect();
     let inserted = undefined;
     try {
@@ -155,6 +168,10 @@ export async function startSession(id, userName) {
 
 export async function checkAnswer(sessionId, answer) {
     let session = await getSession(sessionId);
+    const client = new MongoClient(settings.authDBURL);
+    const collectionTests = client.db('testing').collection('tests');
+    const collectionSession = client.db('testing').collection('sessions');
+    const collectionResults = client.db('testing').collection('results');
     await client.connect();
     let test;
     try {
