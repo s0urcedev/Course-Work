@@ -291,7 +291,7 @@ app.get('/api/testing/create-test', express.urlencoded({ extended: false }), asy
             } catch (err) {
                 res.sendStatus(401);
             }
-            res.redirect(`/${(req.headers.referer ?? '').includes('/uk') ? 'uk' : 'en'}/testing/edit-test?id=${await createTest(user['email'])}`);
+            res.redirect(`/${(req.headers.referer ?? '').includes('/uk') ? 'uk' : 'en'}/testing/edit-test?id=${await createTest(user['email'], req.headers.referer)}`);
         } else {
             res.sendStatus(401);
         }

@@ -92,22 +92,22 @@ export async function getTestsResults(id) {
     return res;
 }
 
-export async function createTest(email) {
+export async function createTest(email, referer) {
     const client = new MongoClient(settings.authDBURL);
     const collectionTests = client.db('testing').collection('tests');
     await client.connect();
     let inseted = await collectionTests.insertOne({
         'authorsEmail': email,
-        'name': 'Blank test',
+        'name': (referer ?? '').includes('/uk') ? 'Порожній тест' : 'Blank test',
         'numberOfQuestionsForStudent': 1,
         'numberOfQuestionsForTeacher': 1,
         'numberOfMaxPoints': 1,
         'questions': [
             {
-                'text': 'Blank question',
-                'rightAnswer': 'Blank right answer',
+                'text': (referer ?? '').includes('/uk') ? 'Порожнє питання' : 'Blank question',
+                'rightAnswer': (referer ?? '').includes('/uk') ? 'Порожня правильна відповідь' : 'Blank right answer',
                 'wrongAnswers': [
-                    'Blank wrong answer'
+                    (referer ?? '').includes('/uk') ? 'Порожня неправильна відповідь' : 'Blank wrong answer'
                 ],
                 'numberOfAnswers': 2
             }
