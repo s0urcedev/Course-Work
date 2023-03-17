@@ -124,7 +124,7 @@
         <input type="text" name="userName" bind:value={userName} placeholder="Ім'я користувача">
         {#if testId !== undefined && testId !== '' && userName !== undefined && userName !== ''}
             <div style="margin: auto; text-align: center;">
-                <button type="button" on:click={() => { document.getElementById('startSessionForm').submit(); }}>Start</button>
+                <button type="button" on:click={() => { document.getElementById('startSessionForm').submit(); }}>Почати</button>
             </div>
         {/if}
     </form>
