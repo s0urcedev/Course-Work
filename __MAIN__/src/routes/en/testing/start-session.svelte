@@ -6,9 +6,9 @@
     function getTestName(id) {
         if (id !== undefined && id !== '' && id.length === 24) {
             testName = fetch(`/api/testing/check-test?id=${id}`).then(res => res.json()).then(data => testName = data['name']);
-            if (typeof testName !== 'string') testName = '*Invalid ID*';
+            if (typeof testName !== 'string') testName = undefined;
         } else {
-            testName = '*Invalid ID*';
+            testName = undefined;
         }
     }
 
@@ -119,10 +119,10 @@
         <span>Test's ID:</span>
         <input type="text" name="id" bind:value={testId} placeholder="Test's ID">
         <span>Test's name:</span>
-        <span>{testName}</span>
+        <span>{testName ?? '*Invalid ID*'}</span>
         <span>Username:</span>
         <input type="text" name="userName" bind:value={userName} placeholder="Username">
-        {#if testId !== undefined && testId !== '' && userName !== undefined && userName !== ''}
+        {#if testId !== undefined && testId !== '' && userName !== undefined && userName !== '' && testName !== undefined && testName !== ''}
             <div style="margin: auto; text-align: center;">
                 <button type="button" on:click={() => { document.getElementById('startSessionForm').submit(); }}>Start</button>
             </div>
