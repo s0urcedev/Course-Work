@@ -8,7 +8,7 @@
         if (screenWidth < 600) {
             document.getElementsByTagName('body')[0].style.zoom = screenWidth / 600;
         }
-        newLocation = window.location.pathname.replace('/uk', '/en');
+        newLocation = window.location.href.replace('/uk', '/en');
     });
 </script>
 

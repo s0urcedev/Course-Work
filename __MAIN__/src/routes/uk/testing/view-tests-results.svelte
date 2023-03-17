@@ -91,7 +91,7 @@
         display: block;
         outline: 0;
         background: #009075;
-        width: 200px;
+        width: 300px;
         margin: auto;
         margin-top: 10px;
         border: 0;
@@ -138,6 +138,6 @@
         {:else}
             <span style="font-size: 28px; text-align: center"><b>{test['name']}</b> не отримав жодного результату</span>
         {/if}
-        <button on:click={exportTable}>Export</button>
+        <button on:click={exportTable}>Експортувати</button>
     {/if}
 </main>
