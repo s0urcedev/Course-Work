@@ -168,20 +168,10 @@ export async function startSession(id, userName) {
 
 export async function checkAnswer(sessionId, answer) {
     let session = await getSession(sessionId);
+    let test = await getTest(session['testId']);
     const client = new MongoClient(settings.authDBURL);
-    const collectionTests = client.db('testing').collection('tests');
     const collectionSession = client.db('testing').collection('sessions');
     const collectionResults = client.db('testing').collection('results');
-    await client.connect();
-    let test;
-    try {
-        test = await collectionTests.findOne({ _id: ObjectId(session['testId']) });
-    } catch (err) {
-        await client.close();
-        test = undefined;
-        return undefined;
-    }
-    await client.close();
     if (answer === test['questions'][session['levelsOfQuestionsIndexes'][session['currentQuestionLevel']]]['rightAnswer']) {
         session['levelsOfQuestionsIndexes'][session['currentQuestionLevel']] ++;
         session['score'] += session['currentQuestionLevel'];

@@ -109,6 +109,14 @@
         opacity: 0.85;
     }
 
+    td {
+        font-size: 24px;
+        padding: 5px;
+        vertical-align: top;
+        border: 2px solid #009075;
+        border-collapse: collapse;
+    }
+
 </style>
 
 <svelte:head>
@@ -121,17 +129,17 @@
             <span style="font-size: 28px; text-align: center"><b>{test['name']}</b> results:</span>
             <table style="margin-top: 10px; width: 100%; border: 2px solid #009075; border-collapse: collapse">
                 <tr>
-                    <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse; background-color: #009075; color: #FFFFFF; text-align: center"><b>Name</b></td>
-                    <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse; background-color: #009075; color: #FFFFFF; text-align: center"><b>Start date</b></td>
-                    <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse; background-color: #009075; color: #FFFFFF; text-align: center"><b>End date</b></td>
-                    <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse; background-color: #009075; color: #FFFFFF; text-align: center"><b>Score</b></td>
+                    <td style="background-color: #009075; color: #FFFFFF; text-align: center"><b>Name</b></td>
+                    <td style="background-color: #009075; color: #FFFFFF; text-align: center"><b>Start date</b></td>
+                    <td style="background-color: #009075; color: #FFFFFF; text-align: center"><b>End date</b></td>
+                    <td style="background-color: #009075; color: #FFFFFF; text-align: center"><b>Score</b></td>
                 </tr>
                 {#each testsResults as result}
                     <tr>
-                        <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse;">{result['userName']}</td>
-                        <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse;">{new Date(result['startDate']).toUTCString()}</td>
-                        <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse;">{new Date(result['endDate']).toUTCString()}</td>
-                        <td style="font-size: 24px; padding: 5px; vertical-align: top; border: 2px solid #009075; border-collapse: collapse;">{result['score']}/{test['numberOfMaxPoints']}</td>
+                        <td>{result['userName']}</td>
+                        <td>{new Date(result['startDate']).toUTCString()}</td>
+                        <td>{new Date(result['endDate']).toUTCString()}</td>
+                        <td>{result['score']}/{test['numberOfMaxPoints']}</td>
                     </tr>
                 {/each}
             </table>
