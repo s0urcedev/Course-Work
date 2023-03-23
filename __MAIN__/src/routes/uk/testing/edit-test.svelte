@@ -194,7 +194,7 @@
             {/each}
         {/if}
         <div style="margin: auto; text-align: center;">
-            <button type="button" on:click={() => { document.getElementById('editTestForm').submit(); }}>Зберігти</button>
+            <button type="button" on:click={() => { document.getElementById('editTestForm').submit(); }}>Зберегти</button>
             <button type="button" style="background-color: red; margin-left:5px;" on:click={() => {
                 if (confirm('Ви впевнені, що хочете видалити тест?')) {
                     fetch(`/api/testing/delete-test?id=${testId}`).then((res) => res.json()).then((data) => window.location.href = `/uk/${data.url}`);
