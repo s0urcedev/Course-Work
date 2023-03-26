@@ -157,9 +157,9 @@
                     </tr>
                 {/each}
             </table>
+            <button on:click={exportTable}>Export</button>
         {:else}
             <span style="font-size: 28px; text-align: center"><b>{test['name']}</b> hasn't got any results</span>
         {/if}
-        <button on:click={exportTable}>Export</button>
     {/if}
 </main>
