@@ -4,7 +4,7 @@ import compression from 'compression';
 import * as sapper from '@sapper/server';
 import { getUser } from './api/users';
 import { registerUser, loginUser } from './api/authorization';
-import { getTest, getSession, getQuestion, getUsersTests, getResult, getTestsResults, createTest, deleteTest, editTest, startSession, checkAnswer } from './api/testing';
+import { getTest, getSession, getQuestion, getUsersTests, getResult, getTestsResults, createTest, deleteTest, editTest, startSession, checkAnswer, deleteResult } from './api/testing';
 import { hash } from './security/hashing';
 import cookieParser from 'cookie-parser';
 import { calculateLevels, calculateLevelsIndexes } from './tools/calculations';
@@ -259,6 +259,14 @@ app.get('/api/testing/get-result', express.urlencoded({ extended: false }), asyn
     }
 });
 
+app.get('/api/testing/delete-result', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+        res.send(await deleteResult(req.query.id));
+    } catch (err) {
+        res.sendStatus(500);
+    }
+});
+
 app.get('/api/testing/get-tests-results', express.urlencoded({ extended: false }), async (req, res) => {
     try {
         if (await isLoggedinAndValid(req.cookies)) {
@@ -320,7 +328,7 @@ app.get('/api/testing/delete-test', express.urlencoded({ extended: false }), asy
                 if ((req.headers.referer ?? '').includes('/uk')) {
                     res.redirect('/uk?message=Ви не власник цього тесту');
                 } else {
-                    res.redirect('/uk?message=You are not owner of that test');
+                    res.redirect('/en?message=You are not owner of that test');
                 }
             }
         } else {
@@ -373,7 +381,7 @@ app.post('/api/testing/edit-test', express.urlencoded({ extended: false }), asyn
                 if ((req.headers.referer ?? '').includes('/uk')) {
                     res.redirect('/uk?message=Ви не власник цього тесту');
                 } else {
-                    res.redirect('/uk?message=You are not owner of that test');
+                    res.redirect('/en?message=You are not owner of that test');
                 }
             }
         } else {

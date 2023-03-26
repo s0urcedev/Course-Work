@@ -92,6 +92,13 @@ export async function getTestsResults(id) {
     return res;
 }
 
+export async function deleteResult(id) {
+    const client = new MongoClient(settings.authDBURL);
+    const collectionResults = client.db('testing').collection('results');
+    await collectionResults.deleteOne({ _id: ObjectId(id) });
+    await client.close();
+}
+
 export async function createTest(email, referer) {
     const client = new MongoClient(settings.authDBURL);
     const collectionTests = client.db('testing').collection('tests');
@@ -120,8 +127,12 @@ export async function createTest(email, referer) {
 export async function deleteTest(id) {
     const client = new MongoClient(settings.authDBURL);
     const collectionTests = client.db('testing').collection('tests');
+    const collectionSessions = client.db('testing').collection('sessions');
+    const collectionResults = client.db('testing').collection('results');
     await client.connect();
     await collectionTests.deleteOne({ _id: ObjectId(id) });
+    await collectionSessions.deleteMany({ testId: id });
+    await collectionResults.deleteMany({ testId: id });
     await client.close();
 }
 

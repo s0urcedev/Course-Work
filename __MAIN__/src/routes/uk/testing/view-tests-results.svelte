@@ -133,6 +133,7 @@
                     <td style="background-color: #009075; color: #FFFFFF; text-align: center"><b>Дата початку</b></td>
                     <td style="background-color: #009075; color: #FFFFFF; text-align: center"><b>Дата кінця</b></td>
                     <td style="background-color: #009075; color: #FFFFFF; text-align: center"><b>Рахунок</b></td>
+                    <td style="background-color: #009075; color: #FFFFFF; text-align: center"></td>
                 </tr>
                 {#each testsResults as result}
                     <tr>
@@ -140,6 +141,19 @@
                         <td>{new Date(result['startDate']).toUTCString()}</td>
                         <td>{new Date(result['endDate']).toUTCString()}</td>
                         <td>{result['score']}/{test['numberOfMaxPoints']}</td>
+                        <td style="text-align: center; vertical-align: middle; padding-top: 0">
+                            <button style="all: unset; cursor: pointer; text-align: center; vertical-align: middle; height: 30px" on:click={
+                                () => {
+                                    if (confirm('Ви впевнені, що хочете видалити цей результат?')) {
+                                        fetch(`/api/testing/delete-result?id=${result['_id']}`).then(() => {
+                                            window.location.reload();
+                                        });
+                                    }
+                                }
+                            }>
+                                <img src="delete-icon.png" alt="" style="display: inline-block; height: 100%">
+                            </button>
+                        </td>
                     </tr>
                 {/each}
             </table>
